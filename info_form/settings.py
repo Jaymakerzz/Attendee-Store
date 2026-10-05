@@ -39,11 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_filters',
+    'debug_toolbar',
     'rest_framework',
+    'django_filters',
     'attendee',
     'regform',
-    'debug_toolbar',
+    'core'
 
 ]
 
@@ -151,3 +152,5 @@ MAILERS = {
 REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING': False,
 }
+
+AUTH_USER_MODEL = 'core.User'

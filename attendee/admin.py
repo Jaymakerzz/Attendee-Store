@@ -2,8 +2,6 @@ from django.contrib import admin
 from .models import Attendee, Attendee_photo
 
 # Register your models here.
-
-
 class AttendeePhotoInline(admin.TabularInline):
     model = Attendee_photo
     extra = 1

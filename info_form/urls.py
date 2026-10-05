@@ -29,6 +29,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('regform/', include('regform.urls')),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
     path('attendee/', include('attendee.urls')),
 ] + debug_toolbar_urls()
 

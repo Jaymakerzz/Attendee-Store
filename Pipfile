@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+mysqlclient = "*"
+pillow = "*"
+django-debug-toolbar = "*"
+djangorestframework = "*"
+django-filter = "*"
+
+[dev-packages]
+faker = "*"
+
+[requires]
+python_version = "3.14"

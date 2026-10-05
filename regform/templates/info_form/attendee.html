@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3>Attendee Details:</h3>
+      {{ attendee.as_p }}
+      <h3>Attendee Photo:</h3>
+      {{ photo.as_p }}
+      <input type="submit" name="btn btn_primary" value="Submit" />
+    </form>
+  </body>
+</html>

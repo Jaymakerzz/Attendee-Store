@@ -12,6 +12,7 @@ djangorestframework = "*"
 django-filter = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
+whitenoise = "*"
 
 [dev-packages]
 faker = "*"

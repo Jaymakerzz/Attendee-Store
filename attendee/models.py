@@ -36,7 +36,7 @@ class Attendee (models.Model):
 class Attendee_photo(models.Model):
     attendee = models.OneToOneField(
         Attendee, on_delete=models.CASCADE, primary_key=True, related_name='photo')
-    photo = models.ImageField(upload_to='attendee_photos/', null=True, blank=True)
+    photo = models.ImageField(upload_to='images/', null=True, blank=True)
     photo_uploaded_at = models.DateTimeField(auto_now=True)
 
     class Meta:

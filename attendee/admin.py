@@ -21,9 +21,10 @@ class AttendeePhotoInline(admin.TabularInline):
 class AttendeeAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'attendee_code',
                     'phone_number', 'email', 'organization', 'role')
+    readonly_fields = ('attendee_code',)
     inlines = [AttendeePhotoInline]
     list_per_page = 10
-    ordering = ('first_name', 'last_name')
+    ordering = ('-id',)
     list_filter = ('role',)
     search_fields = ('first_name__istartswith', 'last_name__istartswith')
 

@@ -26,3 +26,13 @@ class AttendeeSerializer(serializers.ModelSerializer):
             Attendee_photo.objects.create(
                 attendee=attendee, photo=photo_data['photo'])
         return attendee
+
+
+# class RegisterAttendeeSerializer (serializers.ModelSerializer):
+#     image = serializers.ImageField(
+#         source='photo.photo', required=False, allow_null=True)
+#     class Meta:
+#         model = Attendee
+#         fields = ['id', 'first_name', 'last_name', 'email',
+#                   'phone_number', 'organization', 'role', 'image']
+

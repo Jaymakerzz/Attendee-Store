@@ -4,7 +4,7 @@ from .forms import NewAttendeeForm, NewAttendeePhotoForm
 # Create your views here.
 
 def index(request):
-    return render(request, 'info_form/index.html')
+    return render(request, 'register/index.html')
 
 def attendees(request):
     if request.method == 'POST':
@@ -24,7 +24,7 @@ def attendees(request):
         attendee_form = NewAttendeeForm()
         photo_form = NewAttendeePhotoForm()
 
-    return render(request, 'info_form/attendee.html', {
+    return render(request, 'register/attendee.html', {
         'attendee': attendee_form,
         'photo': photo_form,
 

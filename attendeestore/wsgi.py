@@ -1,5 +1,5 @@
 """
-WSGI config for info_form project.
+WSGI config for attendeestore project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'info_form.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.dev')
 
 application = get_wsgi_application()

@@ -1,6 +1,6 @@
 import os
 import django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'info_form.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.dev')
 django.setup()
 import random
 from faker import Faker

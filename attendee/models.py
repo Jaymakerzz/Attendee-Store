@@ -15,6 +15,13 @@ def generate_attendee_code():
 
 
 class Attendee (models.Model):
+    DEFAULT_ROLE = 'ATTENDEE'
+    ROLE_CHOICES = [
+        ('VIP', 'VIP'), ('SPEAKER', 'Speaker'), ('PARTNER', 'Partner'), 
+        (DEFAULT_ROLE, 'Attendee'), ('ORGANIZER', 'Organizer'),  ('SPONSIR', 'Sponsor'),
+        ('GUEST', 'Guest')
+    ]
+
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     attendee_code = models.CharField(max_length=8, editable=False,
@@ -24,13 +31,11 @@ class Attendee (models.Model):
     phone_number = models.CharField(max_length=13, unique=True)
     email = models.EmailField(max_length=254, unique=True)
     organization = models.CharField(max_length=150, null=True, blank=True)
-    role = models.CharField(max_length=150, null=True, blank=True)
+    role = models.CharField(max_length=150, choices=ROLE_CHOICES, default= DEFAULT_ROLE, null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
-    # class Meta:
-    #     ordering = ['first_name']
 
 
 class Attendee_photo(models.Model):
@@ -51,9 +56,3 @@ class Attendee_photo(models.Model):
 #         Attendee, on_delete=models.CASCADE, primary_key=True)
 #     poster = models.FileField(upload_to='attendee_posters/')
 #     poster_created_at = models.DateTimeField(auto_now=True)
-
-#     def update_poster(self, new_poster):
-#         if self.poster:
-#             self.poster.delete(save=False)
-#         self.poster = new_poster
-#         self.save()

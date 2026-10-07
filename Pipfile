@@ -13,6 +13,8 @@ django-filter = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
 whitenoise = "*"
+gunicorn = "*"
+waitress = "*"
 
 [dev-packages]
 faker = "*"

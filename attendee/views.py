@@ -1,5 +1,6 @@
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ModelViewSet, GenericViewSet
+from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, UpdateModelMixin
 from rest_framework.filters import SearchFilter, OrderingFilter
 from pagination import CustomPagination
 from .serializer import AttendeeSerializer
@@ -17,10 +18,9 @@ class AttendeeViewSet(ModelViewSet):
     ordering = ['-photo__photo_uploaded_at']
 
 
-    #manual filtering based on role query parameter without using django-filter package
-    # def get_queryset(self):
-    #     queryset = Attendee.objects.select_related('photo').all()
-    #     role = self.request.query_params.get('role')
-    #     if role is not None:
-    #         queryset = queryset.filter(role=role)
-    #     return queryset
+# class RegisterAttendee(CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, GenericViewSet):
+#     queryset = Attendee.objects.select_related('photo').all()
+#     serializer_class = RegisterAttendeeSerializer
+
+
+

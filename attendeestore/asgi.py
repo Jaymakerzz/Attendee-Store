@@ -1,5 +1,5 @@
 """
-ASGI config for info_form project.
+ASGI config for attendeestore project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'info_form.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.dev')
 
 application = get_asgi_application()

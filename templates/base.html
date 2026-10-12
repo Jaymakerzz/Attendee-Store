@@ -15,8 +15,8 @@
       <div class="logo">Binary Labs</div>
       <div class="nav-link">
         <ul class="list">
-          <li><a class="link-item link-nav" href="{% url 'attendee:api-root' %}">API</a></li>
-          <li><a class="link-item link-nav" href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a class="link-item link-nav" href="{% url 'attendee:api-root' %}" target="_blank" rel="noopener noreferrer">API</a></li>
+          <li><a class="link-item link-nav" href="{% url 'admin:index' %}" target="_blank" rel="noopener noreferrer">Admin</a></li>
           <li><a class="link-item btn_primary btn_gradient" href="{% url 'home' %}">Register</a></li>
         </ul>
       </div>
@@ -30,9 +30,9 @@
     <footer class="footer">
       <h3 class="link-heading">Related Links:</h3>
       <div class="footer-links">
-        <a class="link-item link-nav" href="#">Home</a>
-        <a class="link-item link-nav" href="#">Django girls</a>
-        <a class="link-item link-nav" href="#">Deploy Africa</a>
+        <a class="link-item link-nav" href="{% url 'index' %}">Home</a>
+        <a class="link-item link-nav" href="https://djangogirls.deploy.tz/" target="_blank" rel="noopener noreferrer">Django girls</a>
+        <a class="link-item link-nav" href="https://deploy.tz/" target="_blank" rel="noopener noreferrer">Deploy Africa</a>
       </div>
       <div class="copyright">
         

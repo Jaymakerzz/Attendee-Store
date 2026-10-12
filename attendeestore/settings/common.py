@@ -16,7 +16,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TEMPLATES_DIR = BASE_DIR / 'templates'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_DIRS = BASE_DIR / 'static'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/

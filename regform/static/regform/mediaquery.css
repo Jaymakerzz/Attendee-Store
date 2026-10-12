@@ -1,0 +1,158 @@
+
+@media (max-width: 1200px) {
+  .section__book {
+    padding: 0 4rem;
+  }
+
+  .book__form {
+    padding: 4rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-heading {
+    font-size: 6rem;
+  }
+
+  .heading-support {
+    font-size: 3.2rem;
+  }
+
+  .main {
+    margin-top: 4rem;
+  }
+
+  .nav-container {
+    padding: 1.6rem 1.6rem;
+  }
+
+  /* booking form */
+  .section__book {
+    padding: 0 3rem;
+  }
+
+  .book {
+    background-image: linear-gradient(75deg,
+                      transparent 0%,
+                      transparent 30%,
+                      var(--secondary-footer-color2) 30%),
+                      url(../images/meeting.jpg);
+    background-position: left center;
+  }
+
+  .book__form {
+    margin-left: 35%;
+    width: 65%;
+    padding: 3.5rem 3rem;
+  }
+
+  .form {
+    margin-top: 2rem;
+  }
+
+  .form__input {
+    padding: 1.3rem 1.8rem;
+  }
+  .form__file::file-selector-button {
+    font-size: 1.5rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 0 1.6rem;
+    font-size: 1.6rem;
+  }
+
+  .nav-container {
+    left: 1.6rem;
+    right: 1.6rem;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem 0;
+  }
+
+  .list {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link-item:link,
+  .link-item:visited {
+    margin-right: 0;
+  }
+
+  .main {
+    margin-top: 10rem;
+  }
+
+  .main-heading {
+    font-size: 4rem;
+    margin-top: var(--margin-medium);
+  }
+
+  .heading-support {
+    font-size: 2.4rem;
+    margin-top: var(--margin-small);
+  }
+
+  .main-paragraph {
+    font-size: 1.6rem;
+    margin-top: var(--margin-small);
+    margin-bottom: var(--margin-small);
+  }
+
+  .primary-link {
+    font-size: 1.8rem;
+  }
+
+  
+
+  .section__book {
+    padding: 0; 
+  }
+
+  .book {
+    background-image: none;
+    background-color: var(--secondary-footer-color);
+    box-shadow: none;
+  }
+
+  .book__form {
+    margin-left: 0;
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+
+  .form {
+    margin-top: 1.5rem;
+  }
+
+  .form__input {
+    font-size: 1.6rem; 
+    padding: 1.3rem 1.6rem;
+  }
+
+  .label {
+    margin-left: 1.6rem;
+  }
+
+  .btn_primary {
+    width: 100%;
+  }
+
+  .photo-form label {
+    font-size: 1.5rem;
+  }
+
+  .form__file {
+    font-size: 1.3rem;
+  }
+
+  .form__file::file-selector-button {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.4rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,18 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form method="POST" enctype="multipart/form-data">
+{% extends 'base.html' %}
+
+{% block body_block %}
+  <main class="main">
+    <section class="section__book">
+      <div class="book">
+        <div class="book__form">
+  <form method="POST" enctype="multipart/form-data" class="form">
       {% csrf_token %}
-      <h3>Attendee Details:</h3>
-      {{ attendee.as_p }}
-      <h3>Attendee Photo:</h3>
-      {{ photo.as_p }}
-      <input type="submit" name="btn btn_primary" value="Submit" />
+      <h3 class="details">Attendee Details:</h3>
+    {% for field in attendee %}
+    <div class="form-group">
+      {{ field }}
+      <label for="{{ field.id_for_label }}" class="label">{{ field.label }}</label>
+      {{ field.errors }}
+    </div>
+    {% endfor %}
+      <h3 class="details">Attendee Photo:</h3>
+      <div class="photo_form">
+      {{ photo.as_div }}
+      </div>
+      <button type="submit" class="btn btn_primary btn_gradient">Submit</button>
     </form>
-  </body>
-</html>
+    </div>
+    </div>
+    </section>
+    </main>
+{% endblock %}

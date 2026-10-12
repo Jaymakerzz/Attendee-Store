@@ -1,0 +1,40 @@
+
+.photo-form label {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.form__file {
+    font-family: inherit;
+    font-size: 1.4rem;
+    cursor: pointer;   
+    text-overflow: ellipsis; 
+}
+
+.form__file::file-selector-button {
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5rem;
+  background-color: var(--primary-color);
+  color: var(--primary-green);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form__file::file-selector-button:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 0.2);
+}
+
+.form__file::file-selector-button:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.2);
+}
+
+.form__file:focus-visible {
+  outline: 1.6px solid var(--primary-green);
+  outline-offset: 3px;
+  border-radius: 5rem;
+}

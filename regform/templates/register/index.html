@@ -1,14 +1,13 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Attendee</title>
-  </head>
-  <body>
-    <h2>Register Your Details here</h2>
-    <p><a href="{% url 'admin:index' %}">Admin</a></p>
-    <a href="{% url 'home' %}">Register</a>
-    <p><a href="{% url 'attendee:api-root' %}">View Attendees</a></p>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block body_block %}
+    <main class="main">
+    <h1 class="main-heading">Attend Our Event
+      <span class="heading-support">Empower yourself with hands-on, <br> real-world experience.</span>
+    </h1>
+    <p class="main-paragraph">Real projects. Real skills. Spots are limited, so register today.</p>
+
+    <a href="{% url 'home' %}" class="link-item primary-link">Register</a>
+    </main>
+
+{% endblock %}

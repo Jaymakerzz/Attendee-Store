@@ -1,0 +1,45 @@
+{% load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'regform/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'regform/form.css'%}">
+    <link rel="stylesheet" href="{% static 'regform/image.css'%}">
+    <link rel="stylesheet" href="{% static 'regform/mediaquery.css'%}">
+    <title>Build & Learn Lab</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="logo">Binary Labs</div>
+      <div class="nav-link">
+        <ul class="list">
+          <li><a class="link-item link-nav" href="{% url 'attendee:api-root' %}">API</a></li>
+          <li><a class="link-item link-nav" href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a class="link-item btn_primary btn_gradient" href="{% url 'home' %}">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+      {% block body_block %} 
+      <!-- main then sections -->
+      {% endblock %}
+
+    <footer class="footer">
+      <h3 class="link-heading">Related Links:</h3>
+      <div class="footer-links">
+        <a class="link-item link-nav" href="#">Home</a>
+        <a class="link-item link-nav" href="#">Django girls</a>
+        <a class="link-item link-nav" href="#">Deploy Africa</a>
+      </div>
+      <div class="copyright">
+        
+        <p class="footer-message"><span class="cpy">&copy;copyright Binary Labs Tanzania</span> Build with Django Using Assistance Provided by Binary Labs during Practical training </p>
+      </div>
+
+    </footer>
+    </div>
+  </body>
+</html>

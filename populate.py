@@ -1,12 +1,12 @@
-from attendee.models import Attendee, Attendee_photo
-from faker import Faker
 import os
-import random
 import django
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.dev')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.prod')
 django.setup()
 
+from attendee.models import Attendee, Attendee_photo
+from faker import Faker
+import random 
 
 fakegen = Faker()
 

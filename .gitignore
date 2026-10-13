@@ -11,9 +11,9 @@ env/
 db.sqlite3
 db.sqlite3-journal
 *.log
+data.json
 /media/
 /staticfiles/
-/static/
 
 # Secrets
 .env

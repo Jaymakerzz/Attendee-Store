@@ -21,7 +21,6 @@ from django.conf.urls.static import static
 from debug_toolbar.toolbar import debug_toolbar_urls
 from regform import views
 
-
 admin.site.site_header = "Attendee Admin"
 admin.site.index_title = "Attendee Administration"
 

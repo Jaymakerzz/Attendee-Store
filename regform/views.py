@@ -9,12 +9,13 @@ def index(request):
 def attendees(request):
     if request.method == 'POST':
         attendee_form = NewAttendeeForm(request.POST)
-        if request.FILES:
-            photo_form = NewAttendeePhotoForm(request.POST, request.FILES)
-        else:
-            photo_form = NewAttendeePhotoForm()
+        photo_form = NewAttendeePhotoForm(request.POST, request.FILES)
+        has_photo = bool(request.FILES.get("photo"))
 
-        if attendee_form.is_valid() or photo_form.is_valid():
+        attendee_valid = attendee_form.is_valid()
+        photo_valid = photo_form.is_valid() if has_photo else True
+
+        if attendee_valid and photo_valid:
             attendee = attendee_form.save()
             photo = photo_form.save(commit=False)
             photo.attendee = attendee

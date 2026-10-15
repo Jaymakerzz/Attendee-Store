@@ -1,7 +1,7 @@
 import os
 import django
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.prod')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'attendeestore.settings.dev')
 django.setup()
 
 from attendee.models import Attendee, Attendee_photo
